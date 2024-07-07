@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin:0px;
+                background-color: rgb(255, 255, 255);
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #nav{
+                position:fixed;
+                height:100%;
+                width:160px;
+                background-color: white;
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                
+            }
+            #main{
+                margin-left: 160px;
+                background-color: lightgray;
+                height:10000px;
+                display:flex;
+                flex-direction:column;
+            }
+            .navLink{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding-top: 10px;
+                padding-bottom:10px;
+                width:100%;
+                text-align: center;
+                text-decoration: none;
+                color:black;
+                transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+            }
+            .navLink:hover{
+                background-color: black;
+                color:white;
+            }
+
+            .imgHolder{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .img{
+                width:30vw;
+                height:auto;
+            }
+         
+
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <a href="./index.html" class="navLink">Home</a>
+            <a href="#" class="navLink">About</a>
+            <a href="#" class="navLink">Research</a>
+            <a href="#" class="navLink">Projects</a>
+            <a href="./digit.html" class="navLink">Robotics/Digit</a>
+            <div style="position:absolute;bottom:5px;display:flex;flex-direction: row;justify-content: space-around;width:100%;">
+                <a href="https://www.linkedin.com/in/cyrusghorbani/"><image style="width:auto;height:20px;" src="IMG/linked.png"></image></a>
+                <a href="https://www.youtube.com/@cyrusghorbani8546/videos"><image style="width:auto;height:20px;" src="./IMG/youtubeLogo.jpg"></image></a>
+            </div>
+        </div>
+        <div id="main">
+            <div id="head" style="display:flex;flex-direction:row;justify-content: space-around;">
+            <h1>Personal Projects</h1>
+            </div>
+            <div id="windTunnel" style="margin:10px;">
+                <h1>Low Speed Wind Tunnel Build</h1>
+                <p>I wanted to design and build my own low speed wind tunnel for home use and experiments.
+                    The design was carried out in SOLIDWORKS, and was based on known theory like 
+                    the bell-mehta polynomial and such. 
+                </p>
+                <div class="imgHolder">
+                    <image src="./IMG/projects/windTunnel/matlabApp.jpg" class="img"></image>
+                    <image src="./IMG/projects/windTunnel/extrudeSurface.jpg" class="img"></image>
+                </div>
+                <p>I created a MATLAB app based on what I had read about wind tunnel design for an open tunnel design. The app 
+                    generates the proper wind tunnel dimensions based on the test section size, the fan diameter,
+                    and the desired diffuser angle. The nozzle profile is generated using a bell-mehta polynomial, 
+                    and the app outputs the equation in millimeters. An <i>equation driven curve</i> in SOLIDWORKS can be 
+                    extruded and cut to get the correct surface dimensions, and then the <i>surface flatten</i> tool is used
+                    to get a profile which can be laser cut.
+                </p>
+                <div class="imgHolder">
+                    <image src="./IMG/projects/windTunnel/moldDesign.jpg" class="img"></image>
+                    <image src="./IMG/projects/windTunnel/mold2.jpg" class="img"></image>
+                </div>
+                <p>To construct the nozzles, i designed a mold for the profile in SOLIDWORKS that I could laser cut 
+                    out of plywood. I formed the walls of the nozzle by heating up acrylic in my oven,
+                    and letting it cool on the mold.
+                </p>
+                <div class="imgHolder">
+                    <image src="./IMG/projects/windTunnel/overall.jpg" class="img"></image>
+                    <image src="./IMG/projects/windTunnel/finalAssm.jpg" class="img"></image>
+                </div>
+                <p>Because I made this in my dorm room I had to keep it short. The current diffuser is way shorter
+                    than it should be and will likely result in flow separation and turbulence. So the next steps for this
+                    project will be to rebuild the diffuser section once I have more room.
+                </p>
+                <p>I am also working on creating a smoke generator out of a vape. To see a video, click <a href='https://www.youtube.com/shorts/DrtLtn92x6Y'>here</a></p>
+            </div>
+
+            <div id="Panel Method"
+        </div>
+        
+        
+          
+        
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>I AM LOOKING FOR A ROOMMATE</title>
+        <style>
+            body{
+                display:flex;
+                margin:0px;
+                overflow:hidden;
+                flex-direction: column;
+                
+            }
+            div{
+                display:flex;
+            }
+            .vertical{
+                flex-direction:column;
+                width:100%;       
+            }
+            .horizontal{
+                flex-direction: row;
+            }
+            .child{
+                transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                flex-shrink: 1;
+                flex-grow: 1;
+                flex-basis:auto;
+                justify-content: center;
+                align-items: center;
+                background-image: radial-gradient(circle at center, rgb(61, 172, 61) 0%, rgb(112, 112, 196) 100%);
+                color: yellow;
+                font-size: 40px;
+                text-shadow:
+                     0.07em 0 black,
+                     0 0.07em black,
+                     -0.07em 0 black,
+                      0 -0.07em black;
+            }
+            .child:hover{
+                font-size:25px;
+                color:brown;
+            }
+            .misc{
+                height:auto;
+                background-image: linear-gradient(red 0%, black 100%);
+            }
+            #setheight{
+                height:calc(100% - 147px);
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="horizontal">
+            <image src="IMAGES/roommate/home.jpg" class="image"></image>
+            <div class="vertical">
+                <div class="child">ROOMMATE WANTED</div>
+                <div class="child"><--------- THIS COULD BE US</div>
+            </div>
+        </div>
+
+        <div id= "setheight" class="vertical">
+            <div class="child">CALL 781-572-0126</div>
+            <div class="child">CALL CYRUS GHORBANI</div>
+            <div class="child">UML STUDENTS ONLY</div>
+        </div>
+
+    </body>
+</html>

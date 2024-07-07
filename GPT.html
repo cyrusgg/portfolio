@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Flying Through Space with p5.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+</head>
+
+<body>
+  <h1>Flying Through Space with p5.js</h1>
+  <div id="canvas-container"></div>
+
+  <style>
+    /* Style the canvas container */
+    #canvas-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+  </style>
+
+  <script>
+    // Create a new p5.js sketch and set the canvas size
+    let sketch = new p5(p => {
+      let bgImg; // Declare a variable to hold the background image
+      let starfield; // Declare a variable to hold the starfield
+
+      p.preload = function() {
+        // Load the background image and starfield
+        bgImg = p.loadImage("https://i.imgur.com/xUjiyLn.jpg");
+        starfield = p.createImg("https://i.imgur.com/XzQxCcP.png");
+        starfield.hide(); // Hide the starfield image from view
+      }
+
+      p.setup = function() {
+        p.createCanvas(800, 600);
+        p.imageMode(p.CORNER); // Set the image mode to CORNER
+      }
+
+      // Define the draw() function to draw the flying through space effect
+      p.draw = function() {
+        // Scroll the background image by 1 pixel each frame
+        bgImg.position(bgImg.position().x - 1, bgImg.position().y);
+
+        // Draw the background image
+        p.image(bgImg, 0, 0);
+
+        // Draw the starfield image
+        p.image(starfield, 0, 0);
+
+        // Set the fill color to white with a random alpha value
+        p.fill(255, 255, 255, p.random(255));
+
+        // Draw 100 stars at random positions on the canvas
+        for (let i = 0; i < 100; i++) {
+          let x = p.random(p.width);
+          let y = p.random(p.height);
+          p.ellipse(x, y, 5, 5);
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

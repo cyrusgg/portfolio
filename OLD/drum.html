@@ -1,0 +1,80 @@
+<html>      
+    <head>
+        <style>
+            #kickBox{
+                width:100%;
+                height:100%;
+                position:absolute;
+                left:0px;
+                top:0px;
+                z-index:1;
+            }
+            #hihatBox{
+                width:100%;
+                height:50px;
+                border-radius: 25%;
+                position:absolute;
+                left:0px;
+                top:0px;
+                z-index:2;
+            }
+        </style>
+    </head>
+    <body>
+        <audio id="kick" src="./sounds/kick.WAV"></audio>
+        <audio id="hihat" src="./sounds/hihat.WAV"></audio>
+        
+        
+        <div id="kickBox"></div>
+        <div id="hihatBox"></div>
+        
+        
+        
+        <script>
+            var kick = document.getElementById("kick");
+            var kickBox = document.getElementById("kickBox");
+            var hihat = document.getElementById("hihat");
+            var hihatBox = document.getElementById("hihatBox");
+            document.addEventListener('keypress',e=>{
+             
+                if(e.key == " "){
+                    kick.pause();
+                    kick.currentTime = 0;
+                    kick.play()
+                    
+
+                }
+                if(e.key == "g" || e.key == "h"){
+                    hihat.pause();
+                    hihat.currentTime = 0;
+                    hihat.play();
+                }
+            })
+            document.addEventListener('keydown',d=>{
+                if(d.key == " "){
+                    kickBox.style.transition = "0s";
+                    kickBox.style.backgroundColor = "red";
+                    hihatBox.style.transition = "0s";
+                    hihatBox.style.backgroundColor = "red";
+                }
+                if(d.key == "g" || d.key == "h"){
+                    hihatBox.style.transition = "0s";
+                    hihatBox.style.backgroundColor = "yellow";
+                }
+            })
+            document.addEventListener('keyup',f=>{
+                console.log(f)
+                if(f.key == " "){
+                    kickBox.style.transition = "0.3s";
+                    kickBox.style.backgroundColor = "white";
+                    hihatBox.style.transition = "0.3s";
+                    hihatBox.style.backgroundColor = "white";
+                }
+                if(f.key == "g" || f.key == "h"){
+                    hihatBox.style.transition = "0.2s";
+                    hihatBox.style.backgroundColor = "white";
+                }
+            })
+        </script>
+    </body>
+</html>

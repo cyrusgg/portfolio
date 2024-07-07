@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>pistachio</title>
+        <style>
+            body{
+                margin:0px;
+                overflow:hidden;
+                background-color: blanchedalmond;
+            }
+            #nut{
+                position:absolute;
+                top:calc(50vh - 125px);
+                left:calc(50vw - 75px);
+                background-color:rgba(165, 42, 42, 0.644);
+                height:250px;
+                width:150px;
+                border-radius: 50%;
+                z-index:1;
+                transition:2s cubic-bezier(1,-0.04, 0.59, 0.73);
+                
+            }
+            #Lshell{
+                position:absolute;
+                height:300px;
+                width:110px;
+                background-color: burlywood;
+                border-radius: 175px 0 0 150px;
+                left:calc(50% - 120px);
+                top:calc(50% - 150px);
+                z-index: 2;
+                transform: rotate(-5deg) translateX(-5px);
+                transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+               
+                
+            }
+            #Rshell{
+                position:absolute;
+                height:300px;
+                width:110px;
+                background-color: burlywood;
+                border-radius: 0 175px 150px 0;
+                left:50%;
+                top:calc(50% - 150px);
+                z-index: 2;
+                transform: rotate(5deg) translateX(5px);
+                transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                
+            }
+            #butt{
+                position:absolute;
+                background-color: rgb(43, 138, 43);
+                width:150px;
+                height:50px;
+                border-radius: 5px;
+                border:4px solid darkgreen;
+                right: 200px;
+                bottom: 75px;
+                transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+                color: yellow;
+                font-size: 20px;
+                text-shadow:
+                     0.07em 0 black,
+                     0 0.07em black,
+                     -0.07em 0 black,
+                      0 -0.07em black;
+            }
+            #butt:hover{
+                background-color: darkgreen;
+                font-size: 35px;
+                color: rgba(255, 255, 0, 0.568);
+            }
+            #butt:active{
+                color:blue;
+            }
+            #nut:active{
+                background-image: url("IMAGES/pistachio/sclop.png");
+                background-size:cover;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div id="nut"></div>
+        <div id="Lshell"></div>
+        <div id="Rshell"></div>
+        <button id="butt">CRACK</button>
+
+        <script>
+            var nut = document.getElementById("nut");
+            var Lshell = document.getElementById("Lshell");
+            var Rshell = document.getElementById("Rshell");
+            var button = document.getElementById("butt");
+            butt.onclick = function(crackEvent){
+                Lshell.style.transform = "rotate(-20deg) translateX(-60px)";
+                Rshell.style.transform = "rotate(20deg) translateX(60px)";
+                nut.style.top = "calc(50vh - 210px)";
+            }
+        </script>
+    </body>
+</html>

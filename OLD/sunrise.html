@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>MINECRAFT FANPAGE</title>
+        <style>
+            body{
+                overflow: hidden;
+                margin: 0px;
+            }
+            #headerdiv{
+                height:30%;
+                background-color: rgb(100, 149, 237);
+                margin: 0px;
+
+                display: flex;
+                justify-content: center;
+                align-items:center; 
+                font-size: 1px;
+            }
+            #bodydiv{
+                position:relative;
+                height: 70%;
+                background-color: rgb(255, 235, 205);
+                margin: 0px;
+
+                display: flex;
+                justify-content: center;
+                align-items:center; 
+                font-size: 1px;
+                z-index:2;
+            }
+            #shadowDiv{
+                position:absolute;
+                top:30%;
+                height:70%;
+                width:100%;
+                margin:0px;
+                z-index:5;
+                background-image: linear-Gradient(rgba(100, 100, 100, 0) 0%,rgba(100, 100, 100, 1) 00%)
+            
+            }
+           
+            
+
+            #FOV{
+                background-color:white;
+                opacity:0.1;
+                position:absolute;
+                border-radius: 75%;
+                width:100%;
+                height:100%;
+                z-index:1;
+
+            }
+            #SUN{
+                position:absolute;
+                background-color:yellow;
+                width:100px;
+                height:100px;
+                border-radius:50px;
+                top:200px;
+                z-index:1;
+                left:46%;
+
+            }
+       
+           
+
+            
+        </style>
+    </head>
+    <body>
+        
+       
+        <div id="shadowDiv"></div>
+        <div id="FOV"> </div>
+        <div id="SUN"></div>
+        
+       
+        <div id="headerdiv">CYRUS' FANPAGE</div>
+        <div id="bodydiv">Dont hate the player, hate the game.</div>
+        
+        
+        <script>
+            window.onload = function(positionSun){
+                var sun = document.getElementById("SUN")
+                sun.style.top = window.innerHeight*0.3;
+                //at the charlotte international airport rn !!@!
+            }
+            var sun = document.getElementById("SUN")
+            var shadow = document.getElementById("shadowDiv")
+            currentGrad = 0;
+            document.onwheel= function(e){
+                var style_selector = getComputedStyle(sun)
+                var value = style_selector.top
+                var number = Number(value.substring(0,value.length - 2))
+
+                if(e.deltaY < 0){
+                    sun.style.top = number - 2 + "px"  ; 
+                    currentGrad = currentGrad + 2;
+                    shadow.style.backgroundImage = "linear-Gradient(rgba(100, 100, 100, 0) 0%, rgba(100, 100, 100, 1) " + currentGrad + "%)"
+                }else{
+                    sun.style.top = number + 2 + "px"
+                    currentGrad = currentGrad - 2;
+                    shadow.style.backgroundImage = "linear-Gradient(rgba(100, 100, 100, 0) 0%, rgba(100, 100, 100, 1) " + currentGrad + "%)"
+                }
+            }
+        </script>
+    </body>
+</html>

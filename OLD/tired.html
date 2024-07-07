@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>can't sleep</title>
+        <style>
+            body{
+                position:absolute;
+                margin:0px;
+                overflow:hidden;
+                background-image:linear-gradient(to bottom, grey 0%, black 70%);
+            }
+            #me{
+                position:relative;
+                top:30px;
+                background-image: url("IMAGES/tired/tired.png");
+                background-size: cover;
+                width: 500px;
+                height:340px;
+                transition:20s cubic-bezier(0.075, 0.82, 0.165, 1)
+            }
+            #me:hover{
+                top:10px;
+                background-image:url("IMAGES/tired/tired2.png");
+            }
+            .sh{
+                position:absolute;
+                margin:0px;
+                width:100vw;
+                height:100vh;
+            }
+            #body2{
+                background-image:linear-gradient(to right, rgba(128, 128, 128, 0) 0%, black 40%);
+            }
+            #body3{
+                background-image:linear-gradient(to left, rgba(128, 128, 128, 0) 0%, rgba(128, 128, 128, 0) 75%, black 100%);
+            }
+            #body4{
+                background-image:linear-gradient(to top, rgba(128, 128, 128, 0) 0%, rgba(128, 128, 128, 0) 75%, black 100%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="body2" class="sh"></div>
+        <div id="body3" class="sh"></div>
+        <div id="body4" class="sh"></div>
+        <div id="me"></div>
+
+    </body>
+</html>

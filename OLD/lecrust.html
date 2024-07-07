@@ -1,0 +1,163 @@
+<html>
+    <head>
+    <title>Le Cruset Home</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            margin:0px;
+            overflow:hidden;
+        }
+        #buttonHouse{
+            width:125vh;
+            height:100%;
+            display:grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "logo b1" "b2 b3";
+            margin:0;
+            overflow:hidden;
+            background-color: white;
+        }
+        #logo{
+            grid-area: logo;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+        }
+            #leftCircle{
+                background-color: orange;
+                position:relative;
+                z-index:2;
+                border-radius:25px;
+                width:50px;
+                height:50px;
+            }
+            #rightCircle{
+                background-color: orange;
+                position:relative;
+                z-index:2;
+                border-radius:25px;
+                width:50px;
+                height:50px;
+            }
+            #midsection{
+                background-color: white;
+                width:100px;
+                height:50px;
+                z-index:2;
+            }
+            #mid{
+                position:absolute;
+                z-index:3;
+                width:150px;
+                height:50px;
+                margin:auto;
+                background-color: orange;
+            }
+            #text{
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                position:absolute;
+                z-index:5;
+                margin:auto;
+                width:150px;
+                height:50px;
+                color:white;
+                font-family: sans-serif;
+                font-weight:bold;
+                font-size: large;
+                letter-spacing:4px;
+            }
+        #b1{
+            grid-area: b1;
+            background-image:url('IMAGES/lecruset/happy1.jpg');
+        }
+        #b2{
+            grid-area: b2;
+            background-image:url('IMAGES/lecruset/happy2.jpg');
+        }
+        #b3{
+            grid-area: b3;
+            background-image:url('IMAGES/lecruset/kitchen.jpg');
+        }
+        .btn{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            color:yellow;
+            text-shadow:
+                     0.07em 0 black,
+                     0 0.07em black,
+                     -0.07em 0 black,
+                      0 -0.07em black;
+            font-size: 30px;
+            transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            border:0px;
+            background-size: cover;
+        }
+        .btn:hover{
+            opacity: 0.75;
+            background-color: cadetblue;
+            font-size:40px;
+            font-weight: bolder;
+        }
+        .border{
+            width:calc((100vw - 125vh)/2);
+            height:100%;
+            background-color: rgb(184, 184, 184);
+            border:0px;
+            transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .border:hover{opacity:0.65;}
+        #leftBorder{
+            background-color: darkblue;
+        }
+        #rightBorder{
+            background-color: coral;
+        }
+        #linkedlogo{
+            max-height:100%;
+            max-width:100%;
+        }
+        #eiffel{
+            max-height:100%;
+            max-width:100%;
+        }
+    </style>
+    </head>
+    <body>
+        <a href="https://en.wikipedia.org/wiki/France"><button id="leftBorder" class="border">
+            <image src="IMAGES/lecruset/eiffel.png" id="eiffel"></image>
+        </button></a>
+
+        
+        <div id="buttonHouse">
+            <div id="logo">
+                <div id="leftCircle"></div>
+                <div id="midsection"></div>
+                <div id="rightCircle"></div>
+                <div id="mid"></div>
+                <div id="text">Le Cruste</div>
+            </div>
+            <button class="btn" id="b1">
+                ABOUT US
+            </button>
+            <button class="btn" id="b2">
+                asdasdasdasd
+            </button>
+            <button class="btn" id="b3">
+                PRODUCTS
+            </button>
+            
+        </div>
+        <a href="https://www.linkedin.com/in/cyrusghorbani/"><button id="rightBorder" class="border">
+            <image src="IMAGES/lecruset/linked.png" id="linkedlogo"></image>
+        </button></a>
+    </body>
+</html>

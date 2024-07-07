@@ -1,0 +1,199 @@
+
+<html>
+    <head>
+        <title>Legged Locomotion</title>
+        <style>
+            .flex{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            body{
+                margin:0;
+                height:500vh;
+                width:100vw;
+                background-color: grey;
+                overflow-x:hidden;
+            }
+            #nav{
+                position:fixed;
+                height:100%;
+                width:160px;
+                background-color: white;
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                
+            }
+            #main{
+                margin-left: 160px;
+                background-color: lightgray;
+                height:10000px;
+                display:flex;
+                flex-direction:column;
+                padding-left:5%;
+                padding-right:5%;
+            }
+            .navLink{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding-top: 10px;
+                padding-bottom:10px;
+                width:100%;
+                text-align: center;
+                text-decoration: none;
+                color:black;
+                transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+            }
+            .navLink:hover{
+                background-color: black;
+                color:white;
+            }
+            
+            .img{
+                max-width:100%;
+                height:50vh;
+            }
+            .img2{
+                max-width:100%;
+                height:30vh;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <a href="./index.html" class="navLink">Home</a>
+            <a href="#" class="navLink">About</a>
+            <a href="#" class="navLink">Research</a>
+            <a href="./projects.html" class="navLink">Projects</a>
+            <a href="#" class="navLink">Robotics/Digit</a>
+            <div style="position:absolute;bottom:5px;display:flex;flex-direction: row;justify-content: space-around;width:100%;">
+                <a href="https://www.linkedin.com/in/cyrusghorbani/"><image style="width:auto;height:20px;" src="IMG/linked.png"></image></a>
+                <a href="https://www.youtube.com/@cyrusghorbani8546/videos"><image style="width:auto;height:20px;" src="./IMG/youtubeLogo.jpg"></image></a>
+            </div>
+            
+        </div>
+        <div id="main">
+            <image src="./IMG/projects/DIGIT/traceLogo.jpg" style="width:100%;height:200px;"></image>
+        <h1>Legged Locomotion</h1>
+        <div style="display:flex;flex-direction:row;justify-content:space-between">
+            <div style="width:50%">
+                <p>As an undergraduate at UMass Lowell I worked in the TRACE Lab (now at Purdue University) which works to further research and development
+                    of legged locomotion among other robotics systems. My role in the lab involved Digit,
+                    a bipedal robot from Agility Robotics. My roles included:
+                </p>
+                <ul>
+                    <li>
+                        Dynamic modeling and simulation
+                        <ul>
+                            <li>Experience with FROST, MATLAB, urdf filetype, holonomic constraints, and ROS</li>
+                            <li>Worked with Digit's default simulator to implement our own changes</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Trajectory planning and optimization
+                        <ul>
+                            <li>Experience with a phase variable system for joint trajectories</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <image class="img" src="./IMG/projects/DIGIT/DIGITrevolve.gif"></image>
+        </div>
+        <div id="5link">
+            <h1>5 Link Walker</h1>
+            <div style="display:flex;flex-direction:row;justify-content:space-between">
+                <image class="img" src="./IMG/projects/DIGIT/walking.gif"></image>
+                <div style="width:50%">
+                    <p>To understand the basics of robotics and hybrid walking, we started with a simple 2D 5 link robot 
+                         and simulated the discrete walking using time-based 
+                        joint trajectories. The time based trajectories were useful so that we could focus on 
+                        understanding the basics of the math and make it easier to code.</p>
+                
+                        <ul>
+                            <li>
+                                Topics Covered
+                                <ul>
+                                    <li>Discrete dynamics</li>
+                                    <li>Error dynamics</li>
+                                    <li>introduction to <a href="https://ayonga.github.io/frost-dev/" target="_blank">FROST</a></li>
+                                    <li>urdf filetype</li>
+                                    <li>Holonomic constraints</li>
+                                    <li>MATLAB ODE45 and event ODE</li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="7link">
+            <h1>7 Link Walker</h1>
+            <div style="display:flex;flex-direction:row;justify-content:space-between">
+                
+                <image class="img2" src="./IMG/projects/DIGIT/walkingF1.gif"></image>
+                <image class="img2" src="./IMG/projects/DIGIT/walkingF2.gif"></image>
+                <image class="img2" src="./IMG/projects/DIGIT/walkingF3.gif"></image>
+            </div>
+            <div>
+                <p>Once the 5 link model was working properly, the next step was to replace
+                    the time based trajectory with a phase variable system. This type of system
+                    allows for much more flexibility in controlling certain variables and joint paths, as 
+                    shown in the three variations above. These seemingly complex gaits were generated
+                    only by changing a few coefficients. For the phase implimentation to work it was necesary
+                    that the robot had knees, so we upgraded to a seven link robot.
+                </p>
+            </div>
+            <ul>
+                <li>
+                    Progress made:
+                    <ul>
+                        <li>Implimented the phase variable and guessed bezier coeficients
+                            <ul>
+                                <li>Did not optimize bezier coeficients</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+           
+        </div>
+        <div id="Digit">
+            <h1>Digit</h1>
+            <div style="display:flex;flex-direction:row;justify-content:space-between">
+                <p style="width:50%;">The simulation for Digit required the code to be updated to 3D. This is mostly
+                    changes in the linear algebra and matrix sizes. We also needed to come up with new
+                    holonomic constraints due to the new degrees of freedom, as well as the complexity in 
+                    Digit's closed loop chains. 
+                </p>
+                <ul>
+                    <li>Progress:
+                        <ul>
+                            <li>
+                                Converted dynamics to 3D
+                            </li>
+                            <li>
+                                Created visualization code for Digit in 3D using forward kinematics
+                            </li>
+                            <li>Implimented a numerical jacobian to the code
+                                <ul>
+                                    <li>
+                                        Used the forward kinematics functions as an input in the numeric jacobian function to calculate J and J dot
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                Formulated new holonomic constraints to account for passive joints and new degrees of freedom
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <image class="img" src="./IMG/projects/DIGIT/jun14.gif"></image>
+        </div>
+      
+    </div>
+    </body>
+</html>
