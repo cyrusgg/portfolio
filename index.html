@@ -1,113 +1,115 @@
 <html>
     <head>
+        <link rel="icon" type="image/png" href="./GILAN_TRANSPARENT.png">
+        <link rel="stylesheet" href="background_image.css">
         <style>
             body{
                 margin:0px;
-                background-color: rgb(37, 64, 47);
-                font-family: 'Times New Roman', Times, serif;
-                display:flex;
-                flex-direction:column;
-                height:100vh;
-            }
-            #nav{
-                height:50px;
-                width:100%;
-                flex-grow: 0;
-                background-color: rgb(220, 220, 220);
-                display:flex;
-                flex-direction:row;
+                height: 100vh;
+                display: flex;
                 align-items: center;
-                position: relative;
-                z-index: 3;
-                
-                
+                justify-content: center;
+              
+            }
+            hr{
+                width: 75%;
+                border: 1px solid;
+                color: #000;
             }
             #main{
-                flex-grow: 1;
-                display:flex;
-                flex-direction:row;
-                justify-content: space-between;
-                color: rgb(115, 115, 115);
-                
+                width: 92%;
+                height: 86%;                
+                background-color: rgb(253, 221, 255);
+                border: 1px solid black;
+                filter: drop-shadow(4px 4px 8px);
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 26px;
                 
             }
-            #ViewingWindow{
-                flex-grow: 1;
-                margin:25px;
-                border-radius: 15px;
-                background-color: rgb(207, 207, 207);
-                display:flex;
-                flex-direction: row;
-                overflow-y:scroll;
-                overflow-x: hidden;    
-
-
-            }
-            .navLink{
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                
-                display:flex;
+           
+            .gridItem {
+                display: flex;
                 flex-direction: column;
+                align-items: center;
                 justify-content: center;
-                width:100%;
-                height:100%;
-                text-align: center;
-                text-decoration: none;
-                color:black;
-                transition: 1s cubic-bezier(0.75, 0.35, 0.17, 1);
+                border-radius: 1%;
+                border: 1px solid #000000;
+                background-color: rgba(0, 255, 21, 0.185);
+                color: rgb(0, 0, 0);
+                filter: drop-shadow(2px 2px 2px);
+            }
+            #Landing{
+                grid-area: 1/4/6/6;
+                margin: 3% 5%;
+            }
+            #Links{
+                grid-area: 3/1/6/3;
+                                margin: 3% 5%;
+            }
+            #footer{
+                font-size: clamp(10px, 1vw, 20px);
+                font-style: italic;
+                width: 170px;
+                
+                height: 25px;
+                border: 1px solid black;
+                background-color: rgb(171, 171, 171);
+            }
+            #header{
+                grid-area: 1/1/3/4;
+                margin: 2% 3%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+           
+            }
+            a{
+                font-size: 1.2vw;
+            }
 
+            .plainText {
+                box-shadow: none;
             }
-            .navLink:hover{
-                background-color: rgb(47, 47, 47);
-                color:white;
-                border-radius: 80% 40% 0% 0%;
-                box-shadow: 0px 0px 15px  white;
-                transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-            }
-            .text{
-                width:30%;
-
-            }
+            
            
 
         </style>
     </head>
     <body>
-        <div id="nav">
-            <div>
-            <image src="./GILAN_TRANSPARENT.png" style="width:auto;height:50px;">
-            </div>
-            <a href="./index.html" class="navLink">Home</a>
-            <a href="#" class="navLink">About</a>
-            <a href="./projects.html" class="navLink">Current Projects</a>
-            <a href="#" class="navLink">Online Store</a>
-            <pre style="display:flex;flex-direction: row;align-items: center;color: rgb(21, 153, 240);font-size: 24px;">  Connect with me -->   </pre>
-            <div style="height: 100%;display:flex;flex-direction: column;justify-content: space-around;">
-                <a href="https://www.linkedin.com/in/cyrusghorbani/"><image style="width:auto;height:20px;" src="IMG/linked.png"></image></a>
-                <a href="https://www.youtube.com/@cyrusghorbani8546/videos"><image style="width:auto;height:20px;" src="./IMG/youtubeLogo.jpg"></image></a>
-            </div>
-        </div>
         <div id="main">
-                <div id="ViewingWindow">
-                    <div id="aboutSection" class="text">
-                        <H1>About Me</H1>
-                        <!-- <div>Consequat mauris nunc congue nisi vitae suscipit. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Vulputate dignissim suspendisse in est ante in nibh mauris. Et sollicitudin ac orci phasellus egestas. Blandit libero volutpat sed cras. Tristique senectus et netus et malesuada. Maecenas ultricies mi eget mauris pharetra. Vivamus arcu felis bibendum ut tristique et egestas. Sagittis eu volutpat odio facilisis mauris sit amet. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Nisi est sit amet facilisis magna etiam tempor orci eu. Pellentesque habitant morbi tristique senectus et. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Metus vulputate eu scelerisque felis imperdiet proin. Tortor consequat id porta nibh venenatis cras sed felis. Arcu odio ut sem nulla pharetra. Cras adipiscing enim eu turpis egestas pretium aenean. Fames ac turpis egestas sed.</div> -->
-                    </div>
+            <div id="Landing" class="gridItem">
+                <div>My Resume</div>
+                <image src="IMAGES/my_resume.jpg" style="width: 100%;height: auto;"></image>
+
+            </div>
+            <div id="Header" class="gridItem">
+                <div class="gridItem" style="width: 60%;height: 50%; padding: 3%;background-color: rgba(0, 0, 255, 0.301);color: white;">
+                    <div style="font-size:clamp(10px, 1.5vw, 30px); letter-spacing: 18px;font-weight: bolder;">CYRUS GHORBANI</div>
+                    <hr>
+                    <div style="font-style: italic;font-size: 1.2vw;">BS Mechanical Engineering</div>
+                    <div style="font-size: 1.2vw;"">Systems Test Engineer</div>
                 </div>
-                <div id="stepper" style="width:60px;height:100%;display:flex;flex-direction:column;align-items: center;flex-grow: 0;">
-                    <div style="flex-grow:0;background-color: rgb(196, 158, 91);width:19px;height:4px;"></div>
-                    <div style="flex-grow:1;width:15px;background: repeating-linear-gradient(340deg,rgb(30, 30, 30) 5px,rgb(117, 117, 117) 10px);"></div>
-                    <div style="flex-grow:0;width:25px;height:30px;position:relative;bottom:3px;background-color: rgb(152,152,152);"></div>
-                    <div style="flex-grow:0;height:20px;width:100%;background-color: rgb(152, 152, 152);"></div>
-                    <div style="flex-grow:0;height:20px;width:100%;background-color: black;"></div>
-                    <div style="flex-grow:0;height:20px;width:100%;background-color: rgb(152, 152, 152);"></div>
+                <image src="IMAGES/cyrus.png" style="height: 100%;width: auto;"></image>
+            </div>
+            <div id="Links" class="gridItem">
+                <div style="margin: 1%;font-weight: bolder;font-size: 1.6vw;">Links To Some Projects</div>
+                <hr>
+                <div style="height:100%;width:100%;display: grid;grid-template: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% / 50% 50%;">
+                    <a href="./projects.html" style="grid-area: 1/1/2/2;text-align: center;">Dorm Room Wind Tunnel</a>
+                    <a href="./c70_project.html" class="plainText" style="grid-area: 2/1/3/2;text-align: center;">Honda C70 EV</a>
+                    <a href="./digit.html" class="plainText" style="grid-area: 3/1/4/2;text-align: center;">Simulation of a Bipedal Robot</a>
+                    <a href="#" class="plainText" style="grid-area: 4/2/5/3;text-align: center;">Panel Method Flow Simulation Project</a>
+
                 </div>
-    
-            <!-- </div> -->
+            </div>
         </div>
-        
-        
-          
-        
+    
+    
+                <div id="footer" style="position: absolute;right: 0;bottom: 0;">Last Updated 6/05/2025</div>
+
+    
     </body>
 </html>

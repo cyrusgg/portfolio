@@ -17,9 +17,7 @@
                 
             }
             #main{
-                margin-left: 160px;
                 background-color: lightgray;
-                height:10000px;
                 display:flex;
                 flex-direction:column;
             }
@@ -52,33 +50,21 @@
         </style>
     </head>
     <body>
-        <div id="nav">
-            <a href="./index.html" class="navLink">Home</a>
-            <a href="#" class="navLink">About</a>
-            <a href="#" class="navLink">Research</a>
-            <a href="#" class="navLink">Projects</a>
-            <a href="./digit.html" class="navLink">Robotics/Digit</a>
-            <div style="position:absolute;bottom:5px;display:flex;flex-direction: row;justify-content: space-around;width:100%;">
-                <a href="https://www.linkedin.com/in/cyrusghorbani/"><image style="width:auto;height:20px;" src="IMG/linked.png"></image></a>
-                <a href="https://www.youtube.com/@cyrusghorbani8546/videos"><image style="width:auto;height:20px;" src="./IMG/youtubeLogo.jpg"></image></a>
-            </div>
-        </div>
+       
         <div id="main">
-            <div id="head" style="display:flex;flex-direction:row;justify-content: space-around;">
-            <h1>Personal Projects</h1>
-            </div>
+
             <div id="windTunnel" style="margin:10px;">
                 <h1>Low Speed Wind Tunnel Build</h1>
                 <p>I wanted to design and build my own low speed wind tunnel for home use and experiments.
                     The design was carried out in SOLIDWORKS, and was based on known theory like 
-                    the bell-mehta polynomial and such. 
+                    the bell-mehta polynomial etc. 
                 </p>
                 <div class="imgHolder">
                     <image src="./IMG/projects/windTunnel/matlabApp.jpg" class="img"></image>
                     <image src="./IMG/projects/windTunnel/extrudeSurface.jpg" class="img"></image>
                 </div>
                 <p>I created a MATLAB app based on what I had read about wind tunnel design for an open tunnel design. The app 
-                    generates the proper wind tunnel dimensions based on the test section size, the fan diameter,
+                    generates the proper wind tunnel dimensions to prevent flow separation and turbulence, based on the test section size, the fan diameter,
                     and the desired diffuser angle. The nozzle profile is generated using a bell-mehta polynomial, 
                     and the app outputs the equation in millimeters. An <i>equation driven curve</i> in SOLIDWORKS can be 
                     extruded and cut to get the correct surface dimensions, and then the <i>surface flatten</i> tool is used
@@ -103,11 +89,11 @@
                 <p>I am also working on creating a smoke generator out of a vape. To see a video, click <a href='https://www.youtube.com/shorts/DrtLtn92x6Y'>here</a></p>
             </div>
 
-            <div id="Panel Method"
         </div>
         
         
-          
+                  <button style="position:absolute;left: 10px;top: 10px;width: 90px;height: 40px;background-color: blueviolet;"><a style="color: white;" href="./index.html">HOME</a></button>
+
         
     </body>
 </html>

@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin:0px;
+                background-color: rgb(37, 64, 47);
+                font-family: 'Times New Roman', Times, serif;
+                display:flex;
+                flex-direction:column;
+                height:100vh;
+            }
+            #nav{
+                height:50px;
+                width:100%;
+                flex-grow: 0;
+                background-color: rgb(220, 220, 220);
+                display:flex;
+                flex-direction:row;
+                align-items: center;
+                position: relative;
+                z-index: 3;
+                
+                
+            }
+            #main{
+                flex-grow: 1;
+                display:flex;
+                flex-direction:row;
+                justify-content: space-between;
+                color: rgb(115, 115, 115);
+                
+                
+            }
+            #ViewingWindow{
+                flex-grow: 1;
+                margin:25px;
+                border-radius: 15px;
+                background-color: rgb(207, 207, 207);
+                display:flex;
+                flex-direction: row;
+                overflow-y:scroll;
+                overflow-x: hidden;    
+
+
+            }
+            .navLink{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                width:100%;
+                height:100%;
+                text-align: center;
+                text-decoration: none;
+                color:black;
+                transition: 1s cubic-bezier(0.75, 0.35, 0.17, 1);
+
+            }
+            .navLink:hover{
+                background-color: rgb(47, 47, 47);
+                color:white;
+                border-radius: 80% 40% 0% 0%;
+                box-shadow: 0px 0px 15px  white;
+                transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            .text{
+                width:30%;
+
+            }
+           
+
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <div>
+            <image src="./GILAN_TRANSPARENT.png" style="width:auto;height:50px;">
+            </div>
+            <a href="./index.html" class="navLink">Home</a>
+            <a href="#" class="navLink">About</a>
+            <a href="./projects.html" class="navLink">Current Projects</a>
+            <a href="#" class="navLink">Online Store</a>
+            <pre style="display:flex;flex-direction: row;align-items: center;color: rgb(21, 153, 240);font-size: 24px;">  Connect with me -->   </pre>
+            <div style="height: 100%;display:flex;flex-direction: column;justify-content: space-around;">
+                <a href="https://www.linkedin.com/in/cyrusghorbani/"><image style="width:auto;height:20px;" src="IMG/linked.png"></image></a>
+                <a href="https://www.youtube.com/@cyrusghorbani8546/videos"><image style="width:auto;height:20px;" src="./IMG/youtubeLogo.jpg"></image></a>
+            </div>
+        </div>
+        <div id="main">
+                <div id="ViewingWindow">
+                    <div id="aboutSection" class="text">
+                        <H1>About Me</H1>
+                        <!-- <div>Consequat mauris nunc congue nisi vitae suscipit. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Vulputate dignissim suspendisse in est ante in nibh mauris. Et sollicitudin ac orci phasellus egestas. Blandit libero volutpat sed cras. Tristique senectus et netus et malesuada. Maecenas ultricies mi eget mauris pharetra. Vivamus arcu felis bibendum ut tristique et egestas. Sagittis eu volutpat odio facilisis mauris sit amet. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Nisi est sit amet facilisis magna etiam tempor orci eu. Pellentesque habitant morbi tristique senectus et. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Metus vulputate eu scelerisque felis imperdiet proin. Tortor consequat id porta nibh venenatis cras sed felis. Arcu odio ut sem nulla pharetra. Cras adipiscing enim eu turpis egestas pretium aenean. Fames ac turpis egestas sed.</div> -->
+                    </div>
+                </div>
+                <div id="stepper" style="width:60px;height:100%;display:flex;flex-direction:column;align-items: center;flex-grow: 0;">
+                    <div style="flex-grow:0;background-color: rgb(196, 158, 91);width:19px;height:4px;"></div>
+                    <div style="flex-grow:1;width:15px;background: repeating-linear-gradient(340deg,rgb(30, 30, 30) 5px,rgb(117, 117, 117) 10px);"></div>
+                    <div style="flex-grow:0;width:25px;height:30px;position:relative;bottom:3px;background-color: rgb(152,152,152);"></div>
+                    <div style="flex-grow:0;height:20px;width:100%;background-color: rgb(152, 152, 152);"></div>
+                    <div style="flex-grow:0;height:20px;width:100%;background-color: black;"></div>
+                    <div style="flex-grow:0;height:20px;width:100%;background-color: rgb(152, 152, 152);"></div>
+                </div>
+    
+            <!-- </div> -->
+        </div>
+        
+        
+          
+        
+    </body>
+</html>
